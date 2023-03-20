@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+{% comment %} {% block header %} {% endcomment %}
+{% include 'header.html' %}
+{% comment %} {% endblock header %} {% endcomment %}
+
+{% comment %} {% block login %}
+{% include 'login.html' %} 
+{% endblock login %} {% endcomment %}
+{% block main %}
+<!-- Testimonial Start -->
+<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="text-center">
+            <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
+            <h1 class="mb-5">Our Clients Say!!!</h1>
+        </div>
+        <div class="owl-carousel testimonial-carousel position-relative">
+            <div class="testimonial-item bg-white text-center border p-4">
+                <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src={% static 'img/testimonial-1.jpg' %} style="width: 80px; height: 80px;">
+                <h5 class="mb-0">John Doe</h5>
+                <p>New York, USA</p>
+                <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+            </div>
+            <div class="testimonial-item bg-white text-center border p-4">
+                <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src={% static 'img/testimonial-2.jpg' %} style="width: 80px; height: 80px;">
+                <h5 class="mb-0">John Doe</h5>
+                <p>New York, USA</p>
+                <p class="mt-2 mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+            </div>
+            <div class="testimonial-item bg-white text-center border p-4">
+                <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src={% static 'img/testimonial-3.jpg' %} style="width: 80px; height: 80px;">
+                <h5 class="mb-0">John Doe</h5>
+                <p>New York, USA</p>
+                <p class="mt-2 mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+            </div>
+            <div class="testimonial-item bg-white text-center border p-4">
+                <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src={% static 'img/testimonial-4.jpg' %}  style="width: 80px; height: 80px;">
+                <h5 class="mb-0">John Doe</h5>
+                <p>New York, USA</p>
+                <p class="mt-2 mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
+<div class="counter">
+    <div class="container">
+        <div class="row">
+        <div class="col d-flex justify-content-center">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="employees">
+                    <p class="counter-count"><i class="bi bi-globe"></i></p>
+                    <h3 class="text-primary fw-bold "><span><b>150</b></span> +</h3>
+                    <p class="employee-p">travel Destinations</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 px-1">
+                <div class="customer">
+                    <p class="counter-count"><i class="bi bi-gift"></i></p>
+                    <h3 class="text-primary fw-bold "><span><b>200</b></span> +</h3>
+                    <p class="customer-p">Tour Packages</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 px-1">
+                <div class="design">
+                    <p class="counter-count"><i class="bi bi-emoji-smile"></i></p>
+                    <h3 class="text-primary fw-bold "><span><b>2000</b></span> +</h3>
+                    <p class="design-p ">Happy Customers</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="order">
+                    <p class="counter-count"><i class="bi bi-info-circle"></i></p>
+                    {% comment %} <p><span>24*7</span></p> {% endcomment %}
+                    <h3 class="text-primary fw-bold "><span><b>24*7</b></span></h3>
+                    <p class="order-p">Customer Support</p>
+            </div>
+        </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock main %}
+
+{% block footer %}
+{% include 'footer.html' %} 
+{% endblock footer %}  
+{% comment %} {% include 'base.html' %} {% endcomment %}
