@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect
 from django.contrib import messages
 
 
-# from ..dashboard.forms import myform
+#from dashboard.forms import myform
 from dashboard.models import Packages
 from django.contrib.auth import authenticate, login
 
@@ -10,6 +10,7 @@ from django.contrib.auth import authenticate, login
 def home(request):
     context={'pagename':'homepage'}
     return render(request,'index.html',context)
+
 def register(request):
     # context={'page':'hompage'}
     return render(request,'registration.html')
@@ -65,18 +66,19 @@ def about(request):
 def contact(request):
     context={'pagename':'contact us'}
     return render(request,'contact.html',context)
+
 def package(request):
     pkgs=Packages.objects.all()
     context={'pagename':'packages','packages':pkgs}
-    return render(request,'packages.html',context)
+    return render(request,'packages.html',{'pkgs':context})
 
 def packageDetail(request,pkg_id):
-    pkg = Packages.objects.filter(pkg_id=pkg_id)
+    pkg = Packages.objects.filter(id=pkg_id)
     
     context={'pagename': pkg[0].pkg_title,'package':pkg}
     return render(request,'packageDetails.html',context)
 
-def add_package(request):
+'''def add_package(request):
     if request.method == 'POST':
         form = myform(request.POST)
         if form.is_valid():
@@ -86,5 +88,4 @@ def add_package(request):
         form = myform()
     context={'pagename':'Create Package','form': form}
     return render(request, 'addpackage.html',context)
-    
-    
+    '''
