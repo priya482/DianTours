@@ -13,8 +13,9 @@ urlpatterns = [
     path('contact/',views.contact,name='contact us'),
     #path('addpkg/',views.add_package,name='add package'),
     path('packages/',views.package,name='packages'),
+    path('packages/<str:id>/',views.packageDetail,name='package detail'),
     #path('term_condition/',views.term_condition,name='term_condition'),
-
+    
     #path('packages/<str:pkg_id>/',views.packageDetail,name='package details'),
 
     # path('registration',views.registration,name='registration'),

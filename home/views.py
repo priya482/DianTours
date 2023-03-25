@@ -70,13 +70,12 @@ def contact(request):
 def package(request):
     pkgs=Packages.objects.all()
     context={'pagename':'packages','packages':pkgs}
-    return render(request,'packages.html',{'pkgs':context})
+    return render(request,'packages.html',{'context':context})
 
-def packageDetail(request,pkg_id):
-    pkg = Packages.objects.filter(id=pkg_id)
-    
-    context={'pagename': pkg[0].pkg_title,'package':pkg}
-    return render(request,'packageDetails.html',context)
+def packageDetail(request,id):
+    pkg = Packages.objects.filter(id=id)
+    context={'pagename': pkg[0].pkg_title,'package':pkg[0]}
+    return render(request,'packageDetails.html',{'context':context})
 
 '''def add_package(request):
     if request.method == 'POST':

@@ -52,6 +52,6 @@ def add_address(request):
             messages.success(request, 'Data submitted successfully!')
     else:
         form=AddressForm()
-     
+        
     context={'pagename':'Add customer','form': form}
     return render(request,'address.html',context)

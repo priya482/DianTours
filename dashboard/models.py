@@ -17,7 +17,7 @@ class Address(models.Model):
     add_zip=models.CharField(max_length=6)
     
     def __str__(self):
-        return f"{self.add_no}, {self.add_street}, {self.add_city},{self.add_country},{self.add_}"
+        return f"{self.add_no}, {self.add_street}, {self.add_city},{self.add_country},{self.add_zip}"
 
 
 class Admin(models.Model):
