@@ -74,8 +74,7 @@ class Packages(models.Model):
     pkg_price=models.IntegerField()
     pkg_days=models.IntegerField()
     pkg_night=models.IntegerField()
-    tota_seats=models.IntegerField()
-    avil_seats=models.IntegerField()
+   
     pkg_type=models.CharField(max_length=10,choices=PKG_CAT)
     pkg_status=models.BooleanField(default=True)
     pkg_img=models.ImageField(upload_to='destination-2.jpg',default=1)
