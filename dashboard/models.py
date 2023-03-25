@@ -8,6 +8,7 @@ PMT_CHOICE=[('C','Card'), ('U','UPI')]
 PKG_CAT=[('A','Adventure'),('B','Beach'),('R','Religious'),('H','Heritage'),]
 
 class Address(models.Model):
+    id=models.AutoField(primary_key=True)  
     add_no=models.CharField(max_length=5)
     add_street=models.CharField(max_length=50)
     add_city=models.CharField(max_length=15)
@@ -15,8 +16,8 @@ class Address(models.Model):
     add_country=models.CharField(max_length=25)
     add_zip=models.CharField(max_length=6)
     
-def __str__(self):
-    return f"{self.add_no}, {self.add_street}, {self.add_city},{self.add_country},{self.add_}"
+    def __str__(self):
+        return f"{self.add_no}, {self.add_street}, {self.add_city},{self.add_country},{self.add_}"
 
 
 class Admin(models.Model):
@@ -42,11 +43,12 @@ class Customer(models.Model):
         customer_email=models.EmailField(unique=True)
         customer_pswd=models.CharField(max_length=8)
         #customer_img = models.ImageField(upload_to='woman.png')
-def __str__(self):
-        return self.customer_name
+        
+        def __str__(self):
+            return self.customer_name
         
 class Agent(models.Model):
-        agent_id=models.AutoField(primary_key=True)
+        id=models.AutoField(primary_key=True)
         agency_name=models.CharField(max_length=20)       
         agent_name=models.CharField(max_length=50,default=0)
         agent_gender=models.CharField(max_length=7,choices=GENDER_CHOICES)
@@ -55,9 +57,9 @@ class Agent(models.Model):
         agent_dob=models.DateField()
         agent_email=models.EmailField(unique=True)
         agent_pswd=models.CharField(max_length=8)
-
-def __str__(self):
-        return self.agent_name
+        
+        def __str__(self):
+            return self.agent_name
     
 class Packages(models.Model):
     id=models.AutoField(primary_key=True)
@@ -67,7 +69,7 @@ class Packages(models.Model):
     pkg_from=models.CharField(max_length=20)
     pkg_to=models.CharField(max_length=20)
     #pkg_pic=models.ImageField()
-    agent=models.ForeignKey(Agent,on_delete=models.CASCADE,default=0)
+    agent = models.ForeignKey(Agent,on_delete=models.CASCADE,default=0)
     pkg_dec=models.TextField(max_length=255)
     pkg_price=models.IntegerField()
     pkg_days=models.IntegerField()
