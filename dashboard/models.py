@@ -5,7 +5,7 @@ from django.contrib.auth.models import AbstractUser
 GENDER_CHOICES = [('M', 'Male'),('F', 'Female'),('O', 'Other'),]
 MEAL_CHOICE=[('B', 'Breakfast'),('L', 'Lunch'),('D', 'Dinner'),]
 PMT_CHOICE=[('C','Card'), ('U','UPI')]
-PKG_CAT=[('A','Adventure'),('B','Beach'),('R','Religious'),('H','Heritage'),]
+PKG_CAT=[('A','Adventure'),('B','Beach'),('R','Religious'),('H','Heritage'),('H','Honymoon')]
 
 class Address(models.Model):
     id=models.AutoField(primary_key=True)  
@@ -70,7 +70,7 @@ class Packages(models.Model):
     pkg_to=models.CharField(max_length=20)
     #pkg_pic=models.ImageField()
     agent = models.ForeignKey(Agent,on_delete=models.CASCADE,default=0)
-    pkg_dec=models.TextField(max_length=255)
+    pkg_dec=models.TextField(max_length=1000)
     pkg_price=models.IntegerField()
     pkg_days=models.IntegerField()
     pkg_night=models.IntegerField()
