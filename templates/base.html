@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-    <head>
-        {% load static %}
-        <meta charset="utf-8">
+
+<head>
+    {% load static %}
+    <meta charset="utf-8">
     <title>DIAN Tours-complete tour assistant</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
@@ -15,7 +15,20 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://css.yatracdn.com/content/holidays/responsive/details_page/resources/css/packages-details-responsive-lib.min.css?v=28.10.2021" />
+
+
+
+    <link rel="stylesheet" type="text/css"
+        href="https://www.yatra.com/content/globalcdn/airline-logos/css-airline-logos/airline-logos.css" />
+
+
+    <link rel="stylesheet" type="text/css"
+        href="https://css.yatracdn.com/content/holidays/responsive/details_page/resources/css/packages-details-responsive.min.css?v=28.10.2021" />
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -33,8 +46,12 @@
     <link href={% static 'css/style.css' %} rel="stylesheet">
     <link rel="shortcut icon" href={% static 'img/favicon.ico' %} type="image/x-icon">
 
-    {% comment %} <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> {% endcomment %}
-    {% comment %} <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js" integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script> {% endcomment %}
+    {% comment %}
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> {% endcomment %}
+    {% comment %}
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
+        integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script> {% endcomment
+    %}
 
 </head>
 
@@ -43,7 +60,7 @@
 <body>
 
     {% comment %} {% block header %}{% endblock header %} {% endcomment %}
-    
+
     {% include 'header.html' %}
     {% block login %}{% endblock login %}
     {% block registration %}{% endblock registration %}
@@ -52,20 +69,20 @@
     {% include 'footer.html' %}
     {% comment %} {% block footer %}{% endblock footer %} {% endcomment %}
 
- <!-- JavaScript Libraries -->
- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
- <script src={% static 'lib/wow/wow.min.js' %}></script>
- <script src={% static 'js/main.js' %}></script>
- <script src={% static 'lib/easing/easing.min.js' %}></script>
- <script src={% static 'lib/waypoints/waypoints.min.js' %}></script>
- <script src={% static 'lib/owlcarousel/owl.carousel.min.js' %}></script>
- <script src={% static 'lib/tempusdominus/js/moment.min.js' %}></script>
- <script src={% static 'lib/tempusdominus/js/moment-timezone.min.js' %}></script>
- <script src={% static 'lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js' %}></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src={% static 'lib/wow/wow.min.js' %}></script>
+    <script src={% static 'js/main.js' %}></script>
+    <script src={% static 'lib/easing/easing.min.js' %}></script>
+    <script src={% static 'lib/waypoints/waypoints.min.js' %}></script>
+    <script src={% static 'lib/owlcarousel/owl.carousel.min.js' %}></script>
+    <script src={% static 'lib/tempusdominus/js/moment.min.js' %}></script>
+    <script src={% static 'lib/tempusdominus/js/moment-timezone.min.js' %}></script>
+    <script src={% static 'lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js' %}></script>
 
- <!-- Template Javascript -->
- 
+    <!-- Template Javascript -->
+
 </body>
 
 </html>
