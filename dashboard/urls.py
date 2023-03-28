@@ -12,5 +12,5 @@ urlpatterns = [
     path('profile/',views.profile,name='profile'),
     #path('addcustomer/',views.add_customer,name='addcustomer'),
     path('addaddress/',views.add_address,name='addcustomer'),
-
+  
 ]

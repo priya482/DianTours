@@ -13,12 +13,12 @@
                 <div class="col-md-6 col-lg-5 my-auto d-none d-md-block">
                   <!-- <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp"
                   alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" /> -->
-                  <img src={% static 'img/Traveling-rafiki.png' %} alt="Traveller photo" class="img-fluid" style="border-radius: 1rem 0 0 1rem;">
+                 
                 </div>
                 <div class="col-md-6 col-lg-7 d-flex align-items-center">
                   <div class="card-body p-4 p-lg-5 text-black">
                     
-                    {% comment %} <form method="POST" action={% url 'login' %}> {% endcomment %}
+                    {% comment %} <form method="POST" action={% url 'checkAgent' %}> {% endcomment %}
                       {% comment %} {% csrf_token %} {% endcomment %}
                       
                       <div class="d-flex align-items-center mb-3 pb-1">
@@ -35,7 +35,7 @@
                       {% if message %}
                       <p>{{message}}</p>
                       {% endif %}
-                      <form method="POST" action={% url 'login' %}>
+                      <form method="POST" action={% url 'checkAgent' %}>
                       {% csrf_token %}
                       <div class="form-outline mb-4">
                         <input type="text" id="form2Example17" name="username" class="form-control form-control-lg" />

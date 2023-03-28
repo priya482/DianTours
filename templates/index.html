@@ -5,10 +5,12 @@
 {% comment %} {% endblock header %} {% endcomment %}
 
 {% comment %} {% block login %}
-{% include 'login.html' %} 
+{% include 'login_user.html' %} 
 {% endblock login %} {% endcomment %}
 {% block main %}
+
 <!-- Testimonial Start -->
+
 <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container">
         <div class="text-center">
@@ -43,6 +45,27 @@
         </div>
     </div>
 </div>
+
+
+<script type="text/javascript"> 
+    $(window).load(function(){
+$('#thomascook_news').modal('show');
+});
+</script>
+
+<script>
+	$(".second_sec_big_box").owlCarousel({
+        items: 1,
+		lazyLoad: true,
+		lazyLoadEager: 1,
+		loop: true,
+		autoplay:true,
+		nav:true,
+		autoplayTimeout:5000,
+		autoplayHoverPause:true,
+		autoHeight: false
+    })
+</script>
 <!-- Testimonial End -->
 <div class="counter">
     <div class="container">
@@ -87,6 +110,8 @@
         </div>
     </div>
 </div>
+</body>
+
 
 {% endblock main %}
 

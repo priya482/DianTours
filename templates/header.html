@@ -62,15 +62,40 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="fa fa-bars"></span>
         </button>
+      
+      
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <a href={% url 'home' %} class="nav-item nav-link active">Home</a>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">My Account</a> <!----> <!----> 
+                    <div class="dropdown-menu m-0">
+                    <a href="https://secure.yatra.com/manage-bookings/dashboard" title="My Bookings" class="dropdown-item">
+                    My Bookings
+                    </a> 
+                  <div class="dropdown-menu m-0">
+                    <a href="https://secure.yatra.com/manage-bookings/allbookings#/list" title="My Refund" class="dropdown-item">
+                    My Refund
+                    <div class="dropdown-menu m-0">
+                <a href={% url 'login' %} title="Login" class="dropdown-item" >Login</a>
+              </a></li> 
+             
+                 <a href="/agentLogin" title="Yatra for Travel" class="dropdown-item" >
+                Yatra for Agents
+                </a>
+            
+                </div>
+                </div>
+                </div>
+            </div>
+                
+                <a href={% url 'home' %} class="nav-item nav-link ">Home</a>
                 <a href={% url 'about us' %} class="nav-item nav-link">About</a>
                 <a href="service.html" class="nav-item nav-link">Services</a>
                 
                 <a href={% url 'packages' %} class="nav-item nav-link">Packages</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">places</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Places</a>
                     <div class="dropdown-menu m-0">
                         <a href="destination.html" class="dropdown-item">Adventure</a>
                         <a href="booking.html" class="dropdown-item">Beach</a>
@@ -81,7 +106,7 @@
                 </div>
                 <a href={% url 'contact us' %} class="nav-item nav-link">Contact</a>
             </div>
-            <a href={% url 'login' %} class="btn btn-primary rounded-pill py-2 px-4">Login</a>
+           
         </div>
     </nav>
 <!-- Navbar End -->

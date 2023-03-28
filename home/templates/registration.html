@@ -28,7 +28,8 @@
         <div class="col-12">
           <div class="card card-registration card-registration-2" style="border-radius: 15px;box-shadow: 0px 0px 10px 7px black;">
             <div class="card-body p-0">
-              <form action="#">
+              <form action='/registerAgent/' method="post">
+                {% csrf_token %}
               <div class="row g-0">
                 <!-- <div class="heading">
 
@@ -61,28 +62,28 @@
   
                     <div class="row">
                       <div class="col-md-6 mb-4 pb-2">
-                          <input type="text" id="tb_fname" class="form-control form-control-lg" />
-                          <label class="form-label" for="form3Examplev2">First name</label>  
+                          <input type="text" id="tb_fname" name="agencyname" class="form-control form-control-lg" />
+                          <label class="form-label"  for="form3Examplev2">Agency name</label>  
                       </div>
 
                       <div class="col-md-6 mb-4 pb-2">
   
                         <!-- <div class="form-outline"> -->
-                          <input type="text" id="form3Examplev3" class="form-control form-control-lg" />
-                          <label class="form-label" for="form3Examplev3">Last name</label>
+                          <input type="text" id="form3Examplev3" name="name" class="form-control form-control-lg" />
+                          <label class="form-label"  for="form3Examplev3">Full name</label>
                         <!-- </div> -->
   
                       </div>
                     </div>
   
                     <div class="mb-4 pb-2">
-                      <input type="date" id="form3Examplev3" class="form-control form-control-lg" />
-                          <label class="form-label" for="form3Examplev3">Date Of Birth</label>
+                      <input type="date" id="form3Examplev3" name="dob" class="form-control form-control-lg" />
+                          <label class="form-label"  for="form3Examplev3">Date Of Birth</label>
                       
                     </div>
 
                     <div class="mb-4 pb-2">
-                          <label class="form-label p-r-1" for="form3Examplev3"><b>Gender:</b></label>&nbsp;&nbsp;&nbsp;
+                          <label class="form-label p-r-1"  for="form3Examplev3"><b>Gender:</b></label>&nbsp;&nbsp;&nbsp;
 
                           <input class="form-check-input" type="radio" name="gender" value="male" id="rm">
                           <label  for="male">Male</label>&nbsp;&nbsp;
@@ -97,16 +98,16 @@
                     <div class="col-md mb-4 pb-2">
   
                       <!-- <div class="form-outline form-white"> -->
-                        <input type="text" id="form3Examplea8" class="form-control form-control-lg" />
+                        <input type="text" id="form3Examplea8" name="contact"  class="form-control form-control-lg"/>
                         <label class="form-label" for="form3Examplea8">Phone Number</label>
                       </div>
                       <div class="mb-4">
-                        <input type="email" id="form3Examplea9" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Examplea9">Email Address</label>
+                        <input type="email" id="form3Examplea9" name="email" class="form-control form-control-lg" />
+                        <label class="form-label"  for="form3Examplea9">Email Address</label>
                       </div>
 
                       <div class="mb-3">
-                        <input class="form-control form-control-lg" type="file" id="formFileMultiple" >
+                        <input class="form-control form-control-lg" name="profile"  type="file" id="formFileMultiple" >
                         <label for="formFileMultiple" class="form-label">Profile Photo</label>
                       </div>
   
@@ -117,37 +118,37 @@
                     <!-- <h3 class="fw-bold text-light mb-5 text-end">Create an Account</h3> -->
                     <div class="row">
                       <div class="col-md-6 mb-4 pb-2">
-                        <input type="text" id="house_no" class="form-control form-control-lg" />
+                        <input type="text" id="house_no" name="houseno" class="form-control form-control-lg" />
                         <label class="form-label" for="form3Examplea2">House No.</label>
                       </div>
 
                       <div class="col-md-6 mb-4 pb-2">
-                        <input type="text" id="street" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Examplev2">Appartment</label>  
+                        <input type="text" id="street" name="appartment" class="form-control form-control-lg" />
+                        <label class="form-label"  for="form3Examplev2">Appartment</label>  
                     </div>
 
                     
                   </div>
                   <div class="row">
                     <div class="col-md-6 mb-4 pb-2">
-                        <input type="text" id="form3Examplea4" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Examplea4">City</label>
+                        <input type="text" id="form3Examplea4" name="city" class="form-control form-control-lg" />
+                        <label class="form-label"  for="form3Examplea4">City</label>
                     </div>
                     <div class="col-md-6 mb-4 pb-2">
-                        <input type="text" id="form3Examplea5" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Examplea5">Zip Code</label>
+                        <input type="text" id="form3Examplea5" name="zipcode" class="form-control form-control-lg" />
+                        <label class="form-label"  for="form3Examplea5">Zip Code</label>
                     </div>
                   </div>
 
                     <div class="row">
                       <div class="col-md-6 mb-4 pb-2">
-                        <input type="text" id="State" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Examplea2">State</label>
+                        <input type="text" id="state" name="state" class="form-control form-control-lg" />
+                        <label class="form-label"  for="form3Examplea2">State</label>
                       </div>
 
                       <div class="col-md-6 mb-4 pb-2">
-                        <input type="text" id="Country" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Examplev2">Country</label>  
+                        <input type="text" id="Country" name="country" class="form-control form-control-lg" />
+                        <label class="form-label"  for="form3Examplev2">Country</label>  
                     </div>
 
                     <hr>
@@ -155,12 +156,12 @@
                   
   
                     <div class="mb-4 pb-2">
-                        <input type="password" id="form3Examplea3" class="form-control form-control-lg" />
+                        <input type="password" name="pwd"  id="form3Examplea3" class="form-control form-control-lg" />
                         <label class="form-label" for="form3Examplea3">Password</label>
                         
                     </div>
                     <div class="mb-4 pb-2">
-                      <input type="password" id="form3Examplea3" class="form-control form-control-lg" />
+                      <input type="password" name="cpwd" id="form3Examplea3" class="form-control form-control-lg" />
                       <label class="form-label" for="form3Examplea3">Confirm Password</label>
                       
                   </div>
@@ -173,7 +174,7 @@
                       </label>
                     </div>
   
-                    <button type="button" class="btn btn-light btn-lg"
+                    <button type="submit" class="btn btn-light btn-lg"
                       data-mdb-ripple-color="dark">Register</button>
                       <button type="reset" class="btn btn-light btn-lg" 
                       data-mdb-ripple-color="dark">Clear</button>

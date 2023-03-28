@@ -11,13 +11,13 @@ class Address(models.Model):
     id=models.AutoField(primary_key=True)  
     add_no=models.CharField(max_length=5)
     add_street=models.CharField(max_length=50)
-    add_city=models.CharField(max_length=15)
-    add_state=models.CharField(max_length=15)
+    add_city=models.CharField(max_length=25)
+    add_state=models.CharField(max_length=25)
     add_country=models.CharField(max_length=25)
     add_zip=models.CharField(max_length=6)
     
     def __str__(self):
-        return f"{self.add_no}, {self.add_street}, {self.add_city},{self.add_country},{self.add_zip}"
+        return f"{self.add_no}, {self.add_street}, {self.add_state},{self.add_city},{self.add_country},{self.add_zip}"
 
 
 class Admin(models.Model):
